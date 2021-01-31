@@ -1,0 +1,17 @@
+<script>
+ const array1 = [1, 1, 1, 1, 2, 1, 1, 1]
+
+let testFilter = array1.filter(data => {
+    let count = 0
+    array1.forEach(rowData => {
+      if (data === rowData) {
+        count++
+      }
+    })
+    if (count === 1) {
+      return data
+    }
+  })
+
+  console.log('testFilter', testFilter[0])
+  </script>

@@ -1,0 +1,18 @@
+<script>
+    
+   console.log (captal('hello word end'));
+    function captal(text) {
+        let splitTextList = text.split(' ');
+        // console.log(splitTextList);
+        let newUpperTextList = splitTextList.map(text => {
+            let newText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+            return newText
+        })
+        // console.log(newUpperTextList.join(' '));
+        let newHelloWorldText = newUpperTextList.join('');
+        // console.log(newHelloWorldText);
+        return newHelloWorldText
+    }
+
+
+</script>

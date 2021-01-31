@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <p id="demo"></p>
+
+    <script>
+
+
+        var myObj, i, j, x = "";
+        myObj = {
+            "cars": [
+                { "name": "rick", "models": ["Corvette Z06", "Lotus Exite S"] },
+                { "name": "john", "models": ["BMW 320D"] },
+                { "name": "zing", "models": ["Honda Jazz", "Honda Click", "Honda Waves"] }
+            ]
+        }
+        myObj.cars.sort((a, b) => a.name.localeCompare(b.name));
+
+        function capitalizeFirstLetter(string) {
+
+            return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        }
+        // console.log(capitalizeFirstLetter("hello case"));
+        // console.log(capitalizeFirstLetter(myObj.cars[1].name));
+
+
+
+        for (i in myObj.cars) {
+            x += capitalizeFirstLetter(myObj.cars[i].name) + " want to buy ";
+            for (j in myObj.cars[i].models) {
+                if (j != 0) {
+                    x += " , ";
+                }
+                x += myObj.cars[i].models[j] + "  ";
+
+            }
+            x += "<br>";
+
+        }
+        
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+</body>
+
+</html>
